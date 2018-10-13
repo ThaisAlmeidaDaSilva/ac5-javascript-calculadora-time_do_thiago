@@ -152,7 +152,7 @@ function ClickNumber(e){
 }
 
 
-function RegraOperador(e){
+function RegraOp(e){
     if(e.className && e.className.indexOf('operacao')!=-1){
         
         if(hasOperation(document.getElementById('resultado').value, "").ExistsOperation ===false){
