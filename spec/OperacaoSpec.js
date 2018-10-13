@@ -15,7 +15,7 @@ describe("Operações", function() {
       var num2 = Math.random() * 10;
       $("#resultado").val(num1+"+"+num2);
       $("button.resultar").click();
-      expect($("#resultado").val()).toBe(num1+num2);
+      expect($("#resultado").val()).toEqual(String(num1+num2));
     });
 
     it("deve responder corretamente a subtração", function(){
@@ -23,7 +23,7 @@ describe("Operações", function() {
       var num2 = Math.random() * 10;
       $("#resultado").val(num1+"-"+num2);
       $("button.resultar").click();
-      expect($("#resultado").val()).toBe(num1-num2);
+      expect($("#resultado").val()).toEqual(String(num1-num2));
     });
 
     it("deve responder corretamente a multiplicação", function(){
@@ -31,15 +31,15 @@ describe("Operações", function() {
       var num2 = Math.floor(Math.random() * 10);
       $("#resultado").val(num1+"*"+num2);
       $("button.resultar").click();
-      expect($("#resultado").val()).toBe(num1*num2);
+      expect($("#resultado").val()).toEqual(String(num1*num2));
     });
 
-    it("deve responder corretamente a multiplicação", function(){
+    it("deve responder corretamente a divisão", function(){
       var num1 = Math.floor(Math.random() * 10);
       var num2 = Math.floor(Math.random() * 10);
       $("#resultado").val(num1+"/"+num2);
       $("button.resultar").click();
-      expect($("#resultado").val()).toBe(num1/num2);
+      expect($("#resultado").val()).toEqual(String(num1/num2));
     });
 
     it("deve colocar a mensagem 'Erro de operação' caso não tenha número a direita.", function(){
