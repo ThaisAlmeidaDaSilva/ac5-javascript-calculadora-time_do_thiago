@@ -1,14 +1,10 @@
 document.getElementById('resultado').value ="";
 
-
-/// Valida existencia de Operação
 function hasOperation(param, ptext){
 	var strOperation = "*+-/";
 	returnOperation = "";
 	var ExistsOperation = false;
-	
     for(i=0; i< strOperation.length; i++){
-		
 		if(param.indexOf(strOperation[i]) !== -1)
 		{
 			returnOperation = strOperation[i];
@@ -19,36 +15,28 @@ function hasOperation(param, ptext){
 	debugger;
 	var strExpression = "";
 	if(ExistsOperation){
-		
 		listresult = document.getElementById('resultado').value.split(returnOperation);
-		
 		if(listresult.length ===2){
 			listresult[1] = ValidNumbers(listresult[1], ptext).trim();
 			strExpression = listresult[0].trim() +returnOperation+listresult[1].trim()
 		}
 		else if(listresult.length ===1)
 		{
-			//listresult[1] = ValidNumbers(listresult[1], ptext).trim();
-			
 		}
 		else{
-		  //document.getElementById('resultado').value = ValidNumbers(document.getElementById('resultado').value, ptext).trim();
 		  strExpression = ValidNumbers(param, ptext).trim(); 
 		}
 	}
 	else{
-		//document.getElementById('resultado').value = ValidNumbers(document.getElementById('resultado').value, ptext).trim();
 		strExpression = ValidNumbers(param, ptext).trim(); 
 	}
 	console.log(strExpression);
-	
 	return {
 		"ExistsOperation": ExistsOperation,
 		"TypeOperation": returnOperation,
 		"ResultExpression": strExpression
 		};
 }
-
 function ValidNumbers(ParamNumber, pConcate){
 	var result = "";
 	if(pConcate == "."){
@@ -67,10 +55,6 @@ function ValidNumbers(ParamNumber, pConcate){
 	
 	return result;
 }
-
-
-
-
 function RemoveItemInvaid()
 {
 	
