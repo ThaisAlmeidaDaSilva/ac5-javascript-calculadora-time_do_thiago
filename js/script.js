@@ -98,7 +98,7 @@ function ValidNumbers(ParamNumber, pConcate){
 	// }
 // }
 
-function RemoveItemInvaid()
+function Remove()
 {
 	
 	if(document.getElementById('resultado').value.length ===1)
@@ -124,8 +124,8 @@ function RemoveItemInvaid()
 	
 }
 
-function ClickResultado_v2(e){
-        RemoveItemInvaid();	
+function ClickResultado(e){
+        Remove();	
     if(e.className && e.className.indexOf('resultar')!=-1){
         try{
 			if(document.getElementById('resultado').value !="")
