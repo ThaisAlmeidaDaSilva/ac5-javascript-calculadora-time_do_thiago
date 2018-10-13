@@ -69,36 +69,8 @@ function ValidNumbers(ParamNumber, pConcate){
 }
 
 
-// /// Função que carrega variaveis da expressão matematica
-// function SplitOperacao(param){
-	// var strOperation = "*+-/";
-	// var num1 = 0;
-	// var num2 = 0;
-	// var Setoperador = "";
-	// var isExistsOperations = false;
-	
-    // for(i=0; i< strOperation.length; i++){
-		
-		// if(param.split(strOperation[i]).length === 2){
-			// Setoperador = strOperation[i];
-			// //num1 = parseFloat(param.split(strOperation[i])[0].trim());
-			// //num2 = parseFloat(param.split(strOperation[i])[1].trim());
-			
-			// isExistsOperations = true;
-			// break;
-		// }
-		
-		// if(isExistsOperations){
-			
-		// }
-		// else{
-			
-		// }
-		
-	// }
-// }
 
-function Remove()
+function RemoveItemInvaid()
 {
 	
 	if(document.getElementById('resultado').value.length ===1)
@@ -124,8 +96,8 @@ function Remove()
 	
 }
 
-function ClickResultado(e){
-        Remove();	
+function ClickResultado_v2(e){
+        RemoveItemInvaid();	
     if(e.className && e.className.indexOf('resultar')!=-1){
         try{
 			if(document.getElementById('resultado').value !="")
@@ -152,7 +124,7 @@ function ClickNumber(e){
 }
 
 
-function RegraOp(e){
+function RegraOperador(e){
     if(e.className && e.className.indexOf('operacao')!=-1){
         
         if(hasOperation(document.getElementById('resultado').value, "").ExistsOperation ===false){
